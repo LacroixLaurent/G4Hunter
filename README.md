@@ -7,3 +7,5 @@ The app requires the following packages:
 * GenomicRanges
 * (S4Vectors)
 * (shiny)
+
+The file size limit might need to be hardcoded. I have tried fasta file up to 5Mb and it seems to work. Above this, there is a upload limit error message
