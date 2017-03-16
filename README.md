@@ -1,5 +1,6 @@
 # G4Hunter
-App related to G4Hunter published in [Bedrat et al NAR 2016](https://doi.org/10.1093/nar/gkw006)  
+App related to G4Hunter published in [Bedrat et al NAR 2016](doi.org/10.1093/nar/gkw006)  
+Supplementary Information can be downloaded from [here](www.ncbi.nlm.nih.gov/pmc/articles/PMC4770238/bin/supp_44_4_1746__index.html)
 The EF184640.1.fa corresponds to the human mitochondrial genome used in the publication.
 
 The app requires the following packages:
