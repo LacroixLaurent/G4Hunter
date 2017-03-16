@@ -1,9 +1,9 @@
 # G4Hunter
-App related to G4Hunter published in [Bedrat et al NAR 2016][paper ref].  
+####App related to G4Hunter published in [Bedrat et al NAR 2016][paper ref].  
 Supplementary Data can be downloaded from [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4770238/bin/supp_44_4_1746__index.html).  
 The EF184640.1.fa corresponds to the human mitochondrial genome used in the publication.
 
-The app requires the following packages:
+#####The app requires the following packages:
 * Biostrings
 * GenomicRanges
 * (S4Vectors)
@@ -21,9 +21,10 @@ The **strand** is **+** if the proposed G4 forming sequence is in the Input Sequ
 The **score** is the G4Hunter score of the _refined_ sequence and **max_score** is the highest score in absolute value in a window of the chosen **window size** for the sequence.  
 **hl** and **k** are respectively the **Threshold** and **Window size** used for the search.  
 The **sequence** correspond the the _refined_ sequence in the **Input file**.  
-Please note that the procedure extracts sequences that have a G4Hunter score above the threshold in a window, fuses the overlapping sequences and then _refine_ theses sequences by removing bases at the extremities that are not G for sequences with a positive score (or C the negative ones). It also looks at the first neigbouring base and adds it to the sequence if it is a G for sequences with a positive score (C for sequences with a negative score).  
+Please note that the procedure extracts sequences that have a G4Hunter score above the threshold (in absolute value) in a window, fuses the overlapping sequences and then _refines_ theses sequences by removing bases at the extremities that are not G for sequences with a positive score (or C the negative ones). It also looks at the first neigbouring base and adds it to the sequence if it is a G for sequences with a positive score (C for sequences with a negative score).  
 Please see the [pulbication][paper ref] and Figure S1B for more details
 
+The output can be exported to a text file that can be directly opened with _Microsoft Excel_.
 
 --------------------------------------------------------------------------
 As this is a simple Shiny app, there is a limit to the size you can upload (5Mb).  
