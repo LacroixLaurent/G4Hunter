@@ -9,5 +9,7 @@ The app requires the following packages:
 * (S4Vectors)
 * (shiny)
 
-The file size limit might need to be hardcoded. I have tried fasta file up to 5Mb and it seems to work.  
-Above this, there is an upload limit error message.
+As this is a simple Shiny app, there is a limit to the size you can upload (5Mb).  
+If necessary (but might not be good for the host), the size limit can be increased  to XX Mbby adding  
+_options(shiny.maxRequestSize=XX*1024^2)_  
+at the top of the server.R file
