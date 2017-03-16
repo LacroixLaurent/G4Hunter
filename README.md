@@ -40,12 +40,11 @@ The output can be exported to a text file that can be directly opened with _Micr
 
 --------------------------------------------------------------------------
 As this is a simple Shiny app, there is a limit to the size you can upload (5Mb).  
-If necessary (but might not be good for the host), the size limit can be increased  to XX Mb by adding  
+If necessary (but might not be good for the host), the size limit can be increased  to XX Mb by adding the following code at the top of the server.R file (_adapted [from stackoverflow](http://stackoverflow.com/questions/18037737/how-to-change-maximum-upload-size-exceeded-restriction-in-shiny-and-save-user)_).  
 ```{r}
 options(shiny.maxRequestSize=XX*1024^2)
 ```
-at the top of the server.R file  
-_adapted [from stackoverflow](http://stackoverflow.com/questions/18037737/how-to-change-maximum-upload-size-exceeded-restriction-in-shiny-and-save-user)_  
+
 
 
 [paper ref]:http://doi.org/10.1093/nar/gkw006
