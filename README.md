@@ -21,9 +21,8 @@ The **strand** is **+** if the proposed G4 forming sequence is in the Input Sequ
 The **score** is the G4Hunter score of the _refined_ sequence and **max_score** is the highest score in absolute value in a window of the chosen **window size** for the sequence.  
 **hl** and **k** are respectively the **Threshold** and **Window size** used for the search.  
 The **sequence** correspond the the _refined_ sequence in the **Input file**.  
-Please note that the procedure extracts sequences that have a G4Hunter score above the threshold in a window, fuses the overlapping sequences and then _refine_ theses sequences by removing bases at the extremities that are not G for sequences with a positive score (or C the negative ones). It also looks at the first neigbouring base and adds it to the sequence if it is a G for sequences with a positive score (C for sequences with a negative score).
-
-
+Please note that the procedure extracts sequences that have a G4Hunter score above the threshold in a window, fuses the overlapping sequences and then _refine_ theses sequences by removing bases at the extremities that are not G for sequences with a positive score (or C the negative ones). It also looks at the first neigbouring base and adds it to the sequence if it is a G for sequences with a positive score (C for sequences with a negative score).  
+Please see the [pulbication][paper ref] and Figure S1B for more details
 
 
 --------------------------------------------------------------------------

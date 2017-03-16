@@ -27,6 +27,6 @@ server = (function(input, output) {
 	output$downloadData <- downloadHandler(
 		filename = function() {paste0(input$altnam,'_hl=',input$hl,'_k=',input$k,'_G4Hseeked_',Sys.Date(),'.txt')},
 		content = function(file) {
-			write.table(dataProcessed(), file,sep='\t',col.names=NA)
+			write.table(dataProcessed(), file,sep='\t',col.names=T,row.names=F)
 		})
 })
