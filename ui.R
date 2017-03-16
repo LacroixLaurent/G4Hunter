@@ -6,11 +6,11 @@ source('./seekG4hunt.r')
 
 
 ui =fluidPage(
-	headerPanel("G4Hunter FastaSeeker (DNA)"),
+	headerPanel("G4Hunter FastaSeeker (DNA or RNA)"),
 	p('by L. Lacroix, laurent.lacroix@inserm.fr'),
 	hr(),
 	fluidRow(
-		column(2,radioButtons("seqtype","Sequence Type",c('DNA'='dna','RNA'='rna'),inline=T))
+		column(2,radioButtons("seqtype","Sequence Type",c('DNA'='DNA','RNA'='RNA'),inline=T))
 	),
 	fluidRow(
 		column(6,
@@ -38,12 +38,11 @@ ui =fluidPage(
 					 )
 
 	),
-	em('Choose a Fasta file with your DNA sequence. Up to 200kb is OK. MultiFasta are not supported (yet)'),
+em('Choose a Fasta file with your DNA/RNA sequence. Up to 5Mb is OK. MultiFasta are not supported (yet)'),
 	h5('Length of the Input Sequence'),
 	textOutput('seqlength'),
 	h5('Number of hits'),
 	textOutput('hits'),
-	# I tried up to 200kb and it seems OK
 	hr(),
 	tableOutput('result'),
 	downloadButton('downloadData', 'Download Results')
