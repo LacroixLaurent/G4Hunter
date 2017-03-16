@@ -10,6 +10,9 @@ ui =fluidPage(
 	p('by L. Lacroix, laurent.lacroix@inserm.fr'),
 	hr(),
 	fluidRow(
+		column(2,radioButtons("seqtype","Sequence Type",c('DNA'='dna','RNA'='rna'),inline=T))
+	),
+	fluidRow(
 		column(6,
 					 fileInput('file1', label= h3('Choose a FASTA File'))
 		),
@@ -21,16 +24,25 @@ ui =fluidPage(
 		)
 	),
 	fluidRow(
-		column(6,
-					 checkboxInput('altnames', 'Alternate Seqname', F)
+		column(3,
+					checkboxInput('withseq', 'Report sequences', T)
 					 ),
-		column(6,
-					 textInput('altnam',label=h4('New Seqname'),value='YourName')
+		column(3,
+					checkboxInput('Gseq', 'Report G-sequences', F)
+					 ),
+		column(3,
+					checkboxInput('altnames', 'Alternate Seqname', F)
+					 ),
+		column(3,
+					textInput('altnam',label=h4('New Seqname'),value='YourName')
 					 )
+
 	),
 	em('Choose a Fasta file with your DNA sequence. Up to 200kb is OK. MultiFasta are not supported (yet)'),
 	h5('Length of the Input Sequence'),
 	textOutput('seqlength'),
+	h5('Number of hits'),
+	textOutput('hits'),
 	# I tried up to 200kb and it seems OK
 	hr(),
 	tableOutput('result'),
