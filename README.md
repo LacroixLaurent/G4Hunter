@@ -13,7 +13,8 @@ The _hTERC.fa_ is the RNA sequence of the human telomerase component.
 The file to download has to be a **single** fasta file that do not exceeds the size limit imposed by Shiny (default is 5Mb, see below how to change it).  
 Letters in the sequence have to belong the the DNA or RNA alphabet (A,C,T or U,G,M,R,W,S,Y,K,V,H,D,B,N). Gaps (- or .) and hard masking (+) are also accepted.  
 You have to choose if your sequence is a **DNA** or **RNA** sequence.  
-Chosse **RNA** only if you have **U** in your sequence. If your fasta corresponding to the **RNA** contains **T** and not **U**, please select **DNA**
+Chosse **RNA** only if you have **U** in your sequence. If your fasta corresponding to the **RNA** contains **T** and not **U**, please select **DNA**.  
+Mix sequences with **T** and **U** are not supported.  
 
 ##### There may be a bug if the wrong type is chosen but it is only at the console.
 
