@@ -10,7 +10,7 @@ ui =fluidPage(
 	p('by L. Lacroix, laurent.lacroix@inserm.fr'),
 	hr(),
 	fluidRow(
-		column(2,radioButtons("seqtype","Sequence Type",c('DNA'='DNA','RNA'='RNA'),inline=T))
+		column(4,radioButtons("seqtype","Sequence Type",c('DNA alphabet'='DNA','RNA alphabet'='RNA'),inline=T))
 	),
 	fluidRow(
 		column(6,
