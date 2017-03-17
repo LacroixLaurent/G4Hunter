@@ -3,11 +3,11 @@ library(shiny)
 
 server = (function(input, output) {
 
-	#showModal(modalDialog(
-	#	title = "G4Hunter seeker",
-	#	"This app identifies DNA regions in a longer DNA sequence for which the G4Hunter score is above the threshold in the window selected size",
-	#	easyClose = TRUE
-	#))
+	showModal(modalDialog(
+		title = "G4Hunter seeker",
+		"This App identifies DNA regions in a longer DNA sequence for which the G4Hunter score is above the threshold in windows of the selected size. Please cite Bedrat, Lacroix and Mergny, Nucleic Acids Research 2016, when reporting results obtained with this App.",
+		easyClose = TRUE
+	))
 	checkInput <- reactive({
 		grepl(paste0('[^(',paste(DNA_ALPHABET[1:15],collapse=','),')]'),gsub('[[:space:]]','',input$seq),ignore.case=T)
 	})
@@ -35,13 +35,18 @@ server = (function(input, output) {
 				if (!checkInput()) {
 					hunted <- modG4huntref(k=as.numeric(input$k),hl=as.numeric(input$hl),chr=dataInput()[[1]],seqname=input$seqname,with.seq=input$withseq,Gseq.only=input$Gseq)
 					res <- as.data.frame(hunted)
+					colnames(res)[8] <- 'threshold'
+					colnames(res)[9] <- 'window'
 				}
 			}
 			if (input$intype=='fas')
 			{
 				if (input$altnames) {senam <- input$altnam}else{senam <-names(dataInput())[1]}
 				hunted <- modG4huntref(k=as.numeric(input$k),hl=as.numeric(input$hl),chr=dataInput()[[1]],seqname=senam,with.seq=input$withseq,Gseq.only=input$Gseq)
-				res <- as.data.frame(hunted)}
+				res <- as.data.frame(hunted)
+				colnames(res)[8] <- 'threshold'
+				colnames(res)[9] <- 'window'
+				}
 		}else{
 			res <- NULL
 		}

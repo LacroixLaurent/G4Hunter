@@ -31,10 +31,8 @@ The **Length of the Input Sequence** corresponds to the length of the DNA sequen
 The output table contains the sequence name (**seqnames**), the **start**, **end** and **width** of the _refined_ sequences, that meet the search criteria.  
 The **strand** is **+** if the proposed G4 forming sequence is in the Input Sequence and this is set to **-** if the G4 forming sequence in on the reverse complementary strand.  
 The **score** is the G4Hunter score of the _refined_ sequence and **max_score** is the highest score in absolute value in a window of the chosen **window size** for the sequence.  
-**hl** and **k** are respectively the **Threshold** and **Window size** used for the search.  
-_these names could be changed to be more explicit into threshold and window size_  
-
-The **sequence** correspond the the _refined_ sequence in the **Input file**. This field is sensitive to the **Report G-sequences** option. This field is not present if the **Report sequences** option is not selected.  
+**threshold** and **window** are respectively the **Threshold** and **Window size** used for the search.  
+The **sequence** corresponds the the _refined_ sequence in the **Input sequence**. This field is sensitive to the **Report G-sequences** option. This field is not present if the **Report sequences** option is not selected.  
 > Please note that the procedure extracts sequences that have a G4Hunter score above the threshold (in absolute value) in a window, fuses the overlapping sequences and then _refines_ theses sequences by removing bases at the extremities that are not G for sequences with a positive score (or C the negative ones). It also looks at the first neigbouring base and adds it to the sequence if it is a G for sequences with a positive score (C for sequences with a negative score).  
 > Please see the [pulbication][paper ref] and Figure S1B for more details
 
