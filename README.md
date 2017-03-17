@@ -23,7 +23,7 @@ The file to download has to be a **single DNA fasta** file that do not exceeds t
 The first line of the fasta file (after the > sign) imposes the sequence name (seqname) in the output. This can be changed by checking the **Alternate Seqname** option and entering the chosen sequence name in the **New Seqname** option.
 
 The **Report sequences** option adds the nucleotide sequences in the output.  
-The **Report G_sequences** option changes sequences with a negative score (C-rich sequences) into their reverse complement. Thus the output reports only G-riche sequences.
+The **Report G_sequences** option changes sequences with a negative score (C-rich sequences) into their reverse complement. Thus the output reports only G-rich sequences.
 
 The **hits** report the number of sequences retrieved that match the settings.  
 The **Length of the Input Sequence** corresponds to the length of the DNA sequence you enter with your Fasta file or manually.
