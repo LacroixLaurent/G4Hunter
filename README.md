@@ -1,5 +1,5 @@
 # G4Hunter
-#### App related to G4Hunter published in [Bedrat et al NAR 2016][paper ref].  
+#### App related to G4Hunter published in [Bedrat _et al._ NAR 2016][paper ref].  
 Supplementary Data can be downloaded from [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4770238/bin/supp_44_4_1746__index.html).  
 The _EF184640.1.fa_ corresponds to the human mitochondrial genome used in the publication.  
 
