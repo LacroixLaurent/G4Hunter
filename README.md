@@ -3,6 +3,8 @@
 Supplementary Data can be downloaded from [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4770238/bin/supp_44_4_1746__index.html).  
 The _EF184640.1.fa_ corresponds to the human mitochondrial genome used in the publication.  
 
+> ##### This App identifies DNA regions in a longer DNA sequence for which the G4Hunter score is above the threshold in windows of the selected size. Please cite "Bedrat A, Lacroix L, & Mergny JL (2016) Re-evaluation of G-quadruplex propensity with G4Hunter. Nucleic Acids Res 44(4):1746-1759."", when reporting results obtained with this App.
+
 ##### The app requires the following packages:
 * Biostrings
 * GenomicRanges
