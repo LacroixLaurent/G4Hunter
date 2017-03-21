@@ -3,7 +3,7 @@
 Supplementary Data can be downloaded from [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4770238/bin/supp_44_4_1746__index.html).  
 The _EF184640.1.fa_ corresponds to the human mitochondrial genome used in the publication.  
 
-> ##### This App identifies DNA regions in a longer DNA sequence for which the G4Hunter score is above the threshold in windows of the selected size. Please cite _"Bedrat A, Lacroix L, & Mergny JL (2016) Re-evaluation of G-quadruplex propensity with G4Hunter. Nucleic Acids Res 44(4):1746-1759."_, when reporting results obtained with this App.
+> ##### This App identifies DNA regions in a longer DNA sequence for which the G4Hunter score is above the chosen threshold in windows of the selected size. Please cite _"Bedrat A, Lacroix L, & Mergny JL (2016) Re-evaluation of G-quadruplex propensity with G4Hunter. Nucleic Acids Res 44(4):1746-1759."_, when reporting results obtained with this App.
 
 ##### The app requires the following packages:
 * Biostrings
@@ -13,7 +13,7 @@ The _EF184640.1.fa_ corresponds to the human mitochondrial genome used in the pu
 
 You have to choose how you enter your sequence either manually (**Manual entry**) or using a DNA fasta file (**Fasta File entry**).  
 
-The **Threshold** and **Window size** fixe the parameters for the sequence search as described in the [publication][paper ref].  
+The **Threshold** and **Window size** determine the parameters for the sequence search as described in the [publication][paper ref]. The higher the threshold, the more stringent the search: fewer G4 motifs wil be found, but these will be the most stable/likely ones.  
 
 ##### For **Manual entry**:
 You can change the **Target name** as you wish, but please note that this name will also end up in the file name of your _output file_ and in the first column of the _output table_.  
