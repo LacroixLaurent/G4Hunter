@@ -8,6 +8,7 @@ source('./seekG4hunt.r')
 ui =fluidPage(
 	headerPanel("G4Hunter Apps"),
 	p('by L. Lacroix, laurent.lacroix@inserm.fr'),
+	helpText(a("Click Here to open the README",href="README.html",target="_blank")),
 	hr(),
 	h2('Quick G4Hunter calculator'),
 	textInput("seq0",label= h4("Sequence"),value="GGGTTAGGGTTAGGGTTAGGG",width='100%'),
