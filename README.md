@@ -47,8 +47,8 @@ The **score** is the G4Hunter score of the _refined_ sequence and **max_score** 
 **Threshold** and **window** are respectively the **Threshold** and **Window size** used for the search.  
 The **sequence** corresponds to the _refined_ sequence in the **Input sequence**. This field is sensitive to the **Report G-sequences** option. This field is not present if the **Report sequences** option is not selected.  
 
-> #####Please note that the procedure extracts sequences that have a G4Hunter score above the threshold (in absolute value) in a window, fuses the overlapping sequences and then _refines_ theses sequences by removing bases at the extremities that are not G for sequences with a positive score (or C the negative ones). It also looks at the first neigboring base and adds it to the sequence if it is a G for sequences with a positive score (C for sequences with a negative score).  
-> #####Please see the [publication][paper ref] and Figure S1B for more details
+> ##### Please note that the procedure extracts sequences that have a G4Hunter score above the threshold (in absolute value) in a window, fuses the overlapping sequences and then _refines_ theses sequences by removing bases at the extremities that are not G for sequences with a positive score (or C the negative ones). It also looks at the first neigboring base and adds it to the sequence if it is a G for sequences with a positive score (C for sequences with a negative score).  
+> ##### Please see the [publication][paper ref] and Figure S1B for more details
 
 The output can be exported to a text file that can be directly opened with _Microsoft Excel_.
 
