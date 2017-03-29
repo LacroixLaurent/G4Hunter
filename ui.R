@@ -23,10 +23,10 @@ ui =fluidPage(
 										 radioButtons("seqtype",h4("Sequence Type"),c('DNA alphabet'='DNA','RNA alphabet'='RNA'),inline=F)
 							),
 							column(3,
-										 textInput("hl",label= h4("Threshold"),value=1.5)
+										 textInput("hl",label= h4("Threshold"),value=1.5,width='60px')
 							),
 							column(3,
-										 textInput("k",label= h4("Window size"),value=20)
+										 textInput("k",label= h4("Window size"),value=20,width='120px')
 							)
 						),
 
