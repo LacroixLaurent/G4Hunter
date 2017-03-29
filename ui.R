@@ -31,8 +31,8 @@ ui =fluidPage(
 						),
 
 						#hr(),
-						wellPanel(textInput("seqname",label= h4("Target name"),value="My_Target"),
-											em('copy/paste a sequence. Up to 5Mb is OK. '),
+						wellPanel(textInput("seqname",label= h4("Target name"),value="My_Target",width='25%'),
+											em('Copy/paste a sequence below. Up to 5Mb is OK. '),
 											em(paste0('Accepted letters are ',paste(DNA_ALPHABET[1:15],collapse=','),' with U instead of T if RNA alphabet is chosen. Spaces are automatically removed. +,- and . are not accepted.')),
 											textInput("seq",label= h4("Sequence"),value="TTTGGGGTGGGGTGGGGTGGGGTTAAAAAATATGCATGCATTGGTGGTGTGGTGGTTTTCCCTAACCCTAACCCTAACCCT",width='100%'),
 											textOutput('seqcheck'),style="background-color:pink;"),
