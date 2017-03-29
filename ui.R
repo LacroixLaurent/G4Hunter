@@ -12,9 +12,9 @@ ui =fluidPage(
 	#	hr(),
 	wellPanel(h2('Quick G4Hunter calculator'),
 						textInput("seq0",label= h4("Sequence"),value="GGGTTAGGGTTAGGGTTAGGG",width='100%'),
-						h4("Score (length)"),textOutput("text1")),
+						h4("Score (length)"),textOutput("text1"),style="background-color:lightgreen;"),
 	#hr(),
-	wellPanel(h2('G4Hunter Seeker'),
+	wellPanel(style="background-color:lightblue;",h2('G4Hunter Seeker'),
 						fluidRow(
 							column(2,
 										 radioButtons("intype",h4("Input Type"),c('Manual entry'='man','Fasta File entry'='fas'),inline=F)
@@ -35,7 +35,7 @@ ui =fluidPage(
 											em('copy/paste a sequence. Up to 5Mb is OK. '),
 											em(paste0('Accepted letters are ',paste(DNA_ALPHABET[1:15],collapse=','),' with U instead of T if RNA alphabet is chosen. Spaces are automatically removed. +,- and . are not accepted.')),
 											textInput("seq",label= h4("Sequence"),value="TTTGGGGTGGGGTGGGGTGGGGTTAAAAAATATGCATGCATTGGTGGTGTGGTGGTTTTCCCTAACCCTAACCCTAACCCT",width='100%'),
-											textOutput('seqcheck')),
+											textOutput('seqcheck'),style="background-color:pink;"),
 						#hr(),
 						wellPanel(fluidRow(
 							column(4,
@@ -48,7 +48,7 @@ ui =fluidPage(
 										 textInput('altnam',label=h4('New Seqname'),value='YourName')
 							)
 						),
-						em('Choose a Fasta file with your DNA or RNA sequence. Up to 5Mb is OK. MultiFasta are not supported.')),
+						em('Choose a Fasta file with your DNA or RNA sequence. Up to 5Mb is OK. MultiFasta are not supported.'),style="background-color:pink;"),
 						#hr(),
 						h3('Results'),
 						fluidRow(
