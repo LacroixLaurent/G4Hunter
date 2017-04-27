@@ -19,7 +19,7 @@ server = (function(input, output) {
 	## Checking input text
 	checkInLength <- reactive({
 		checlen <- NULL
-		if (nchar(input$seq)<as.numeric(input$k)) {checlen <- 'Input sequence shorter than the window size'}
+		if (nchar(input$seq)<as.numeric(input$k) & input$intype=='man') {checlen <- 'Input sequence shorter than the window size'}
 		return(checlen)
 	})
 
