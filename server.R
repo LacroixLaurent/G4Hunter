@@ -17,6 +17,12 @@ server = (function(input, output) {
 
 	# Seeker part
 	## Checking input text
+	checkInLength <- reactive({
+		checlen <- NULL
+		if (nchar(input$seq)<as.numeric(input$k)) {checlen <- 'Input sequence shorter than the window size'}
+		return(checlen)
+	})
+
 	checkInput <- reactive({
 		if (input$seqtype=='DNA')
 		{
@@ -35,7 +41,7 @@ server = (function(input, output) {
 		dataseq <- NULL
 		if (input$intype=='man')
 		{
-			if (grepl('OK',checkInput()))
+			if (grepl('OK',checkInput()) & is.null(checkInLength()))
 			{
 				if (input$seqtype=='DNA')
 				{dataseq <- DNAStringSet(gsub(' ','',input$seq))}
@@ -62,20 +68,30 @@ server = (function(input, output) {
 		{
 			if (input$intype=='man')
 			{
-				if (grepl('OK',checkInput())) {
+				if (grepl('OK',checkInput()) & is.null(checkInLength())) {
 					hunted <- modG4huntref(k=as.numeric(input$k),hl=as.numeric(input$hl),chr=dataInput()[[1]],seqname=input$seqname,with.seq=input$withseq,Gseq.only=input$Gseq)
-					res <- as.data.frame(hunted)
-					colnames(res)[8] <- 'threshold'
-					colnames(res)[9] <- 'window'
+					if (length(hunted)!=0)
+						{
+						res <- as.data.frame(hunted)
+						colnames(res)[8] <- 'threshold'
+						colnames(res)[9] <- 'window'
+						}
+						else
+						{res <- NULL}
 				}
 			}
 			if (input$intype=='fas')
 			{
 				if (input$altnames) {senam <- input$altnam}else{senam <-names(dataInput())[1]}
 				hunted <- modG4huntref(k=as.numeric(input$k),hl=as.numeric(input$hl),chr=dataInput()[[1]],seqname=senam,with.seq=input$withseq,Gseq.only=input$Gseq)
-				res <- as.data.frame(hunted)
-				colnames(res)[8] <- 'threshold'
-				colnames(res)[9] <- 'window'
+				if (length(hunted)!=0)
+				{
+					res <- as.data.frame(hunted)
+					colnames(res)[8] <- 'threshold'
+					colnames(res)[9] <- 'window'
+				}
+				else
+				{res <- NULL}
 				}
 		}else{
 			res <- NULL
@@ -85,6 +101,7 @@ server = (function(input, output) {
 
 
 	output$seqcheck <- renderText(checkInput())
+	output$seqchecklen <- renderText(checkInLength())
 
 	output$result <- renderTable(dataProcessed())
 	output$seqlength <- renderText(length(dataInput()[[1]]))
