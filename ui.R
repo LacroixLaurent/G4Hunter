@@ -12,7 +12,12 @@ ui =fluidPage(
 
 	wellPanel(h2('Quick G4Hunter calculator'),
 						textInput("seq0",label= h4("Sequence"),value="GGGTTAGGGTTAGGGTTAGGG",width='100%'),
-						h4("Score (length)"),h3(textOutput("text1"),style="color:red"),style="background-color:lightgreen;"),
+						fluidRow(
+							column(2,
+										 h4("Score (length)")),
+							column(4,
+										 h4(textOutput("text1"),style="color:red"))),
+							style="background-color:lightgreen;"),
 
 	wellPanel(style="background-color:lightblue;",h2('G4Hunter Seeker'),
 						fluidRow(
