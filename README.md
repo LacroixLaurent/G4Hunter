@@ -1,6 +1,6 @@
 # G4Hunter
 #### Shiny App related to G4Hunter published in [Bedrat _et al._ NAR 2016][paper ref].  
-Supplementary Data can be downloaded from [here](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4770238/bin/supp_44_4_1746__index.html).  
+Supplementary Data can be downloaded from [NCBI](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4770238/bin/supp_44_4_1746__index.html) or [Github](https://github.com/LacroixLaurent/G4HunterPaperGit).    
 The _EF184640.1.fa_ file corresponds to the human mitochondrial genome used in the publication.  
 The _hTERC.fa_ file corresponds to the human telomerase RNA component in RNA alphabet.  
 
